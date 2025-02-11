@@ -66,7 +66,9 @@ This can be done for example by creating a symlink
 - Note the Proton-BeamNG.drive userfolder location (this is usually found in `~/.local/share/Steam/steamapps/compatdata/284160/pfx/drive_c/users/steamuser/AppData/Local/BeamNG.drive`)
 - Create a symlink between both userfolders `ln -s ~/.local/share/Steam/steamapps/compatdata/284160/pfx/drive_c/users/steamuser/AppData/Local/BeamNG.drive ~/.local/share`
 
-Now you can start the native linux BeamMP-Launcher. It will then wait for the game to start, so you need to do that manually, for example trough Steam.
+Once you have a symbolic link in place for the userfolders, you can then instruct Steam to launch the game with the following launch option, which is changed via the game's Properties window in Steam. This assumes you put the launcher's binary that you compiled earlier into its own folder in your home directory called BeamMP (for example: `/home/yourusernamehere/BeamMP/BeamMP-Launcher`)
+
+- `/home/yourusernamehere/BeamMP/BeamMP-launcher --no-launch & %command% ; killall BeamMP-Launcher`
 
 ---
 
